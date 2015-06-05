@@ -1,0 +1,82 @@
+﻿
+.drop-container {
+    min-width: 150px;
+    width: 150px;
+    max-height: none;
+}
+.drop-container-base {
+    word-wrap: break-word;
+    height: 42px;
+    line-height: 42px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #3498db;
+    color: white;
+    transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+}
+    .drop-container-base:hover {
+        opacity: 0.8;
+    }
+.drop-display-div{
+    float:left;
+    width:50%;
+    display:inline-block;
+    padding:3px 3px 3px 3px;
+    margin-top:3px;
+}
+    .drop-display-div:hover {
+        /*animation: shake 200ms 200ms infinite linear;
+        -webkit-animation: shake 200ms 2 infinite linear;*/
+    }
+.drop-header{
+        border-radius:5px;
+        cursor:pointer;
+}
+    .drop-header:hover {
+        opacity: 0.8;
+    }
+        .drop-header:hover + .drop-body {
+            max-height: 100%;
+        }
+.drop-body {
+    max-height: 0;
+    overflow-y: hidden;
+    width:50%;
+    margin-top: 1px;
+    z-index: 99999;
+    position: absolute;
+    overflow: hidden;
+    transition: all 250ms linear;
+    -webkit-transition: all 250ms linear;
+}
+    .drop-body:hover {
+        max-height: 100%;
+    }
+
+.drop-image{
+    height:32px;
+    width:32px;
+    float:right;
+    vertical-align:central;
+}
+
+
+@keyframes shake{
+    0%{
+        transform:translateX(3px);
+    }
+    100%{
+        transform:translateX(-3px);
+    }
+}
+@-webkit-keyframes shake {
+    0% {
+        transform: translateX(3px);
+    }
+    100%{
+        transform:translateX(-3px);
+    }
+}

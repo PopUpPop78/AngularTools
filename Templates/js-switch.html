@@ -1,0 +1,17 @@
+﻿
+
+<div class="switch-container">
+    <div class="switch-label" ng-show="sc.switchLabel!=''">{{sc.switchLabel}}</div>
+    <div ng-app="jsApp" ng-model="sc.switchPosition" class="switch-main-div" ng-click="sc.changeSwitch()">
+        <div class="switch-inner-div">
+            <div class="switch-cover-button" ng-class="{'switch-slide':sc.switchPosition==true}"></div>
+            <div class="switch-button-base switch-button-left">
+                <img class="switch-button-base switch-button-left" style="width:100%;" ng-src="{{sc.imageSource}}" ng-show="sc.imageSource.length>0"/>
+                {{sc.onText}}
+            </div>
+            <div class="switch-button-base switch-button-right">
+                {{sc.offText}}
+            </div>
+        </div>
+    </div>
+</div>

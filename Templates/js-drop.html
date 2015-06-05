@@ -1,0 +1,12 @@
+﻿
+
+<div class=" drop-container">
+    <div class="drop-container-base drop-header">
+        {{dc.dropHeader}}
+    </div>
+    <div class="drop-body">
+        <div ng-repeat="item in dc.dropData" class="drop-container-base drop-display-div" ng-click="dc.selectItem(item)">
+            {{item[dc.displayProperty]}}<img ng-src="{{item[dc.imageSourceProperty]}}" class="drop-image" ng-show="item[dc.imageSourceProperty].length>0" />
+        </div>
+    </div>
+</div>
