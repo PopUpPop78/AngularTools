@@ -14,32 +14,60 @@
     <link href="./Styles/js-drop.css" type="text/css" rel="stylesheet" />
     <link href="./Styles/js-switch.css" type="text/css" rel="stylesheet" />
 
+    <script>
+        /* Main application better example on how to use jsApp */
+        (function () {
+
+            var app = angular.module('app', ['jsApp']);
+
+            app.controller('appController', function () {
+
+                var scope = this;
+
+                this.dropData = [
+                    { Display: 'Hello', Value: 11245, Desc: 'A nice Hello' },
+                    { Display: 'Mario', Value: 22345, Desc: 'A Nintendo character' },
+                    { Display: 'Green', Value: 3565, Desc: 'A color (colour in English)' },
+                    { Display: 'Porsche', Value: 4587, Desc: 'A sweet sports car' }
+                ];
+
+                this.switch1 = true;
+                this.switch2 = false;
+                this.switch3 = true;
+                this.switch4 = false;
+
+                this.item = {};
+
+            });
+
+        })();
+    </script>
 
 </head>
-<body ng-app="jsApp">
+<body ng-app="app" ng-controller="appController as ac">
 
     
-    <js-switch style="display:inline-block;" on-text="on" off-text="off" ng-model="switch1" ng-init="switch1=false" switch-label="On / Off Switch"></js-switch>
-    <js-switch style="display:inline-block;" on-text="go" off-text="stop" ng-model="switch2" ng-init="switch2=true" switch-label="Stop / Go Switch"></js-switch>
-    <js-switch style="display:inline-block;" on-text="good" off-text="bad" ng-model="switch3" ng-init="switch3=false" switch-label="Good Bad"></js-switch>
-    <js-switch style="display:inline-block;" on-text="yes" off-text="no" ng-model="switch4" ng-init="switch4=true" switch-label="Yes No"></js-switch>
+    <js-switch style="display:inline-block;" on-text="on" off-text="off" ng-model="ac.switch1" switch-label="On / Off Switch"></js-switch>
+    <js-switch style="display:inline-block;" on-text="go" off-text="stop" ng-model="ac.switch2" switch-label="Stop / Go Switch"></js-switch>
+    <js-switch style="display:inline-block;" on-text="good" off-text="bad" ng-model="ac.switch3" switch-label="Good Bad"></js-switch>
+    <js-switch style="display:inline-block;" on-text="yes" off-text="no" ng-model="ac.switch4" switch-label="Yes No"></js-switch>
 
     <br />
-    Switch 1: {{switch1}}
+    Switch 1: {{ac.switch1}}
     <br />
-    Switch 2: {{switch2}}
+    Switch 2: {{ac.switch2}}
     <br />
-    Switch 3: {{switch3}}
+    Switch 3: {{ac.switch3}}
     <br />
-    Switch 4: {{switch4}}
+    Switch 4: {{ac.switch4}}
     <br />
-    Selected Item: <span ng-show="item.Display.length>0">{{item.Display}} - {{item.Value}} - {{item.Desc}}</span>
+    Selected Item: <span ng-show="ac.item.Display.length>0">{{ac.item.Display}} - {{ac.item.Value}} - {{ac.item.Desc}}</span>
 
     <js-drop 
-        drop-data="[{Display: 'Hello', Value:11245, Desc:'A nice Hello'},{Display: 'Mario', Value:22345, Desc:'A Nintendo character'},{Display: 'Green', Value:3565, Desc:'A color (colour in English)'},{Display: 'Porsche', Value:4587, Desc:'A sweet sports car'}]"
+        drop-data="ac.dropData"
         display-property="Display"
         drop-header="Somethings"
-        selected-item="item">
+        selected-item="ac.item">
     </js-drop>
 
 
