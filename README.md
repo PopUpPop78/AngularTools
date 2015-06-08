@@ -14,27 +14,41 @@ Tools:
 
 <ul>
 <li>
-on-text="..." the text displayed for true <br/>
+on-text="..." the text displayed for true
 </li>
 <li>
-off-text="..." the text displayed for false <br/>
+off-text="..." the text displayed for false
 </li>
 <li>
-image-source="..." optional image for true position <br/>
+image-source="..." optional image for true position
 </li>
 <li>
-ng-model="true/false" the current position of the switch <br/>
+ng-model="true/false" the current position of the switch
 </li>
 </ul>
 
 <b>js-drop</b>
 
-drop-data="[{}, {}, ..., {}]" array of objects <br/>
-display-property="..." the name of the object property that holds the display text <br/>
-selected-item="{}" the selected item <br/>
-drop-header="..." the title of the drop down <br/>
-image-source-property="..." the name of the property containing the thumbnail image source <br/>
-sort-property="..." the name of the property used for sorting <br/>
+<ul>
+<li>
+drop-data="[{}, {}, ..., {}]" array of objects
+</li>
+<li>
+display-property="..." the name of the object property that holds the display text
+</li>
+<li>
+selected-item="{}" the selected item
+</li>
+<li>
+drop-header="..." the title of the drop down
+</li>
+<li>
+image-source-property="..." the name of the property containing the thumbnail image source
+</li>
+<li>
+sort-property="..." the name of the property used for sorting
+</li>
+</ul>
 
 
 Angular tools
