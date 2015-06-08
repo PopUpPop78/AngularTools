@@ -14,7 +14,7 @@ Tools:
 
 <ul>
 <li>
-on-text="..."           the text displayed for true
+on-text="..." <tab><tab> the text displayed for true
 </li>
 <li>
 off-text="..."          the text displayed for false
