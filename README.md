@@ -12,10 +12,20 @@ Tools:
 
 <b>js-switch</b>
 
+<ul>
+<li>
 on-text="..." the text displayed for true <br/>
+</li>
+<li>
 off-text="..." the text displayed for false <br/>
+</li>
+<li>
 image-source="..." optional image for true position <br/>
+</li>
+<li>
 ng-model="true/false" the current position of the switch <br/>
+</li>
+</ul>
 
 <b>js-drop</b>
 
