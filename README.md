@@ -10,14 +10,14 @@ Angular.animate.js (Angular.animate.min.js)
 Tools:
 -----------------------------------------------------
 
-js-switch
+<b>js-switch</b>
 
 on-text="..." the text displayed for true <br/>
 off-text="..." the text displayed for false <br/>
 image-source="..." optional image for true position <br/>
 ng-model="true/false" the current position of the switch <br/>
 
-js-drop
+<b>js-drop</b>
 
 drop-data="[{}, {}, ..., {}]" array of objects <br/>
 display-property="..." the name of the object property that holds the display text <br/>
