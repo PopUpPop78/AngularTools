@@ -3,7 +3,7 @@
 Requirements:
 -----------------------------------------------------
 
-Angular.js (Angular.min.js)
+Angular.js (Angular.min.js) \r\n
 Angular.animate.js (Angular.animate.min.js)
 
 
