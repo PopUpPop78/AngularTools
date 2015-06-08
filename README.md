@@ -14,16 +14,16 @@ Tools:
 
 <ul>
 <li>
-on-text="..." the text displayed for true
+on-text="..."           the text displayed for true
 </li>
 <li>
-off-text="..." the text displayed for false
+off-text="..."          the text displayed for false
 </li>
 <li>
-image-source="..." optional image for true position
+image-source="..."      optional image for true position
 </li>
 <li>
-ng-model="true/false" the current position of the switch
+ng-model="true/false"   the current position of the switch
 </li>
 </ul>
 
