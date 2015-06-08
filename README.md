@@ -12,19 +12,19 @@ Tools:
 
 js-switch
 
-on-text="..." the text displayed for true
-off-text="..." the text displayed for false
-image-source="..." optional image for true position
-ng-model="true/false" the current position of the switch
+on-text="..." the text displayed for true <br/>
+off-text="..." the text displayed for false <br/>
+image-source="..." optional image for true position <br/>
+ng-model="true/false" the current position of the switch <br/>
 
 js-drop
 
-drop-data="[{}, {}, ..., {}]" array of objects
-display-property="..." the name of the object property that holds the display text
-selected-item="{}" the selected item
-drop-header="..." the title of the drop down
-image-source-property="..." the name of the property containing the thumbnail image source
-sort-property="..." the name of the property used for sorting
+drop-data="[{}, {}, ..., {}]" array of objects <br/>
+display-property="..." the name of the object property that holds the display text <br/>
+selected-item="{}" the selected item <br/>
+drop-header="..." the title of the drop down <br/>
+image-source-property="..." the name of the property containing the thumbnail image source <br/>
+sort-property="..." the name of the property used for sorting <br/>
 
 
 Angular tools
