@@ -12,18 +12,18 @@ Tools:
 
 js-switch
 
-<js-switch
+js-switch
   ...
   on-text="..." - the text displayed for true
   off-text="..." - the text displayed for false
   image-source="..." - optional image for true position
   ng-model="true/false" - the current position of the switch
-  ... >
-</js-switch>
+  ... 
+js-switch
 
 js-drop
 
-<js-drop
+js-drop
   ...
   drop-data="[{}, {}, ..., {}]" - array of objects
   display-property="..." - the name of the object property that holds the display text
@@ -31,8 +31,8 @@ js-drop
   drop-header="..." - the title of the drop down
   image-source-property="..." - the name of the property containing the thumbnail image source
   sort-property="..." - the name of the property used for sorting
-  ... >
-</js-drop>
+  ... 
+js-drop
 
 
 Angular tools
