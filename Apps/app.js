@@ -80,7 +80,6 @@
                 selectedItem: '=',
                 sortableItems: '=?',
                 displayProperty: '@',
-                sortProperty: '@',
             },
             controller: 'selectController',
             controllerAs: 'sc',
