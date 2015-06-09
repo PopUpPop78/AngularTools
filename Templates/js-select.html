@@ -1,0 +1,35 @@
+﻿
+
+
+
+
+<div class="select-container">
+
+
+
+    <div class="select-text-list-base">
+        <input type="text" class="select-text-list-base select-text-area" placeholder="Select..." ng-model="sc.text" ng-click="sc.showItems=true" />
+        <div class="select-list-area" ng-show="sc.showItems==true">
+            <div class="select-list-items" ng-repeat="item in sc.selectData | filter:sc.text | orderBy:sc.sortProperty" ng-click="sc.selectItem(item)">
+                {{item[sc.displayProperty]}} <div style="display:inline-block;" ng-show="sc.displayProperty.replace('-', '')!=sc.sortProperty.replace('-', '')">({{sc.sortProperty.replace('-', '')}}: {{item[sc.sortProperty.replace('-', '')]}})</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="select-arrow-image"  
+        ng-show="sc.sortableItems.count>0"
+         ng-mouseenter="sc.sortOpen=true"
+         ng-mousemove="sc.sortOpen=true"
+         ng-mouseleave="sc.sortOpen=false">
+        <img src="./Images/settings.png" class="select-image" />
+        <div ng-show="sc.sortOpen==true" class="select-sorting-container">
+            <div ng-repeat="sort in sc.sortableItems" class="select-sorting-div" ng-click="sc.changeSort(sort)" ng-class="{'active':sc.sortProperty.replace('-', '')==sort}">
+                {{sort}}
+            </div>
+        </div>
+    </div>
+
+
+</div>

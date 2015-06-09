@@ -4,8 +4,6 @@
 
     var app = angular.module('jsApp', ['ngAnimate']);
 
-
-
     // js-switch directive
     app.directive('jsSwitch', function () {
         return {
@@ -39,7 +37,6 @@
         };
     });
 
-
     // js-drop directive
     app.directive('jsDrop', function () {
         return {
@@ -69,6 +66,52 @@
 
         this.selectItem = function (item) {
             scope.selectedItem = item;
+        };
+
+    });
+
+    // js-select directive
+    app.directive('jsSelect', function () {
+        return {
+            restrict: 'E',
+            templateUrl: './Templates/js-select.html',
+            scope: {
+                selectData: '=',
+                selectedItem: '=',
+                sortableItems: '=?',
+                displayProperty: '@',
+                sortProperty: '@',
+            },
+            controller: 'selectController',
+            controllerAs: 'sc',
+            bindToController: true,
+        }
+    });
+    app.controller('selectController', function () {
+
+        var scope = this;
+
+        this.sortableItems;
+        this.selectedItem = {};
+        this.displayProperty = '';
+        this.sortBy;
+        this.sortOpen = false;
+        this.sortProperty = '';
+        this.selectData;
+        this.text = '';
+        this.showItems = false;
+
+        this.selectItem = function (item) {
+            scope.selectedItem = item;
+            scope.text = item[scope.displayProperty];
+            scope.showItems = false;
+        };
+
+        this.changeSort = function (sort) {
+            if (sort == scope.sortProperty)
+                scope.sortProperty = "-" + sort;
+            else
+                scope.sortProperty = sort;
         };
 
     });
