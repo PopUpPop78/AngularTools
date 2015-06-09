@@ -12,6 +12,8 @@ Tools:
 
 <b>js-switch</b>
 
+Requirements: Images/settings.png
+
 <ul>
 <li>
 on-text="..." the text displayed for true
