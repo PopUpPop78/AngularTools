@@ -12,8 +12,6 @@ Tools:
 
 <b>js-switch</b>
 
-Requirements: Images/settings.png
-
 <ul>
 <li>
 on-text="..." the text displayed for true
@@ -53,6 +51,8 @@ sort-property="..." the name of the property used for sorting
 </ul>
 
 <b>js-select (WIP)</b>
+
+Requirements: Images/settings.png
 
 <ul>
 <li>
