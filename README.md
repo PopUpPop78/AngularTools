@@ -50,5 +50,21 @@ sort-property="..." the name of the property used for sorting
 </li>
 </ul>
 
+<b>js-select (WIP)</b>
+
+<ul>
+<li>
+select-data="[{}, {}, ..., {}]" array of objects
+</li>
+<li>
+sortable-items="..." array of strings representing the name of each sortable property in the select data array
+</li>
+<li>
+display-property="{}" the property name of the displayed property
+</li>
+<li>
+selected-item="..." binding to the selected item
+</li>
+</ul>
 
 Angular tools
