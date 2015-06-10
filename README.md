@@ -65,7 +65,7 @@ sortable-items="..." array of strings representing the name of each sortable pro
 display-property="..." the property name of the displayed property
 </li>
 <li>
-selected-item="..." binding to the selected item
+selected-item="{}" binding to the selected item
 </li>
 </ul>
 
@@ -79,7 +79,7 @@ menu-items="[{}, {}, ..., {}]" array of objects
 display-property="..." the property name of the displayed property
 </li>
 <li>
-selected-item="..." binding to the selected item
+selected-item="{}" binding to the selected item
 </li>
 <li>
 ng-model="true/false" current position of the hamburger
