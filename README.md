@@ -62,10 +62,27 @@ select-data="[{}, {}, ..., {}]" array of objects
 sortable-items="..." array of strings representing the name of each sortable property in the select data array
 </li>
 <li>
-display-property="{}" the property name of the displayed property
+display-property="..." the property name of the displayed property
 </li>
 <li>
 selected-item="..." binding to the selected item
+</li>
+</ul>
+
+<b>js-hamburger (WIP)</b>
+
+<ul>
+<li>
+menu-items="[{}, {}, ..., {}]" array of objects
+</li>
+<li>
+display-property="..." the property name of the displayed property
+</li>
+<li>
+selected-item="..." binding to the selected item
+</li>
+<li>
+ng-model="true/false" current position of the hamburger
 </li>
 </ul>
 
