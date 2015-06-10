@@ -1,0 +1,26 @@
+﻿
+
+
+<div class="hamburger-container"
+     ng-class="{'hamburger-container-open':hc.open, 'hamburger-container-close':!hc.open}"
+     ng-model="hc.open">
+
+    <div style="position:absolute;width:80%;height:100%;background-color:#828282;right:5%;top:0;overflow-y:auto;">
+        <ul style="position:absolute;list-style:none;padding:0;width:90%;">
+            <li class="hamburger-menu-items"
+                ng-repeat="item in hc.menuItems"
+                ng-click="hc.selectItem(item)"
+                ng-class="{'active':hc.selectedItem==item}">{{item[hc.displayProperty]}}</li>
+        </ul>
+    </div>
+
+    <div class="hamburger-ingredients-container"
+         ng-click="hc.open=!hc.open">
+
+        <div class="hamburger-ingredients-base hamburger-ingredients-one" ng-show="!hc.showBurger" ng-class="{'ingr-one-open':hc.open}"></div>
+        <div class="hamburger-ingredients-base hamburger-ingredients-two" ng-show="!hc.showBurger" ng-class="{'ingr-two-open':hc.open}"></div>
+        <div class="hamburger-ingredients-base hamburger-ingredients-two" ng-show="!hc.showBurger" ng-class="{'ingr-three-open':hc.open}"></div>
+
+    </div>
+
+</div>

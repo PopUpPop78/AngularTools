@@ -2,7 +2,10 @@
 
 (function () {
 
+
     var app = angular.module('jsApp', ['ngAnimate']);
+
+
 
     // js-switch directive
     app.directive('jsSwitch', function () {
@@ -37,6 +40,7 @@
         };
     });
 
+
     // js-drop directive
     app.directive('jsDrop', function () {
         return {
@@ -48,6 +52,7 @@
                 dropHeader: '@',
                 displayProperty: '@',
                 imageSourceProperty: '@',
+                sortProperty: '@',
             },
             controller: 'dropController',
             controllerAs: 'dc',
@@ -63,12 +68,14 @@
         this.selectedItem = {};
         this.displayProperty;
         this.imageSourceProperty;
+        this.sortProperty;
 
         this.selectItem = function (item) {
             scope.selectedItem = item;
         };
 
     });
+
 
     // js-select directive
     app.directive('jsSelect', function () {
@@ -78,8 +85,10 @@
             scope: {
                 selectData: '=',
                 selectedItem: '=',
-                sortableItems: '=?',
+                sortableItems: '=',
                 displayProperty: '@',
+                sortProperty: '@',
+                placeHolder: '@',
             },
             controller: 'selectController',
             controllerAs: 'sc',
@@ -98,12 +107,12 @@
         this.sortProperty = '';
         this.selectData;
         this.text = '';
-        this.showItems = false;
+        this.previewItems = false;
+        this.placeHolder = "Select...";
 
         this.selectItem = function (item) {
             scope.selectedItem = item;
             scope.text = item[scope.displayProperty];
-            scope.showItems = false;
         };
 
         this.changeSort = function (sort) {
@@ -111,6 +120,39 @@
                 scope.sortProperty = "-" + sort;
             else
                 scope.sortProperty = sort;
+        };
+
+    });
+
+
+    // js-hamburger
+    app.directive('jsHamburger', function () {
+        return {
+            restrict: 'E',
+            templateUrl: './Templates/js-hamburger.html',
+            scope: {
+                open: "=ngModel",
+                menuItems: '=?',
+                displayProperty: '@',
+                selectedItem: '='
+            },
+            controller: 'hamburgerController',
+            controllerAs: 'hc',
+            bindToController: true,
+        }
+    });
+    app.controller('hamburgerController', function () {
+
+        var scope = this;
+
+        this.menuItems;
+        this.selectedItem = {};
+        this.displayProperty = '';
+        this.open = false;
+
+        this.selectItem = function (item) {
+            scope.selectedItem = item;
+            scope.open = false;
         };
 
     });
